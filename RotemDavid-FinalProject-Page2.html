@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body {
+            background-image: url("https://dalicanvas.co.il/wp-content/uploads/2022/10/%D7%99%D7%A2%D7%A8-%D7%99%D7%A8%D7%95%D7%A7-%D7%97%D7%93%D7%A9-4.jpeg");
+            background-size: cover;
+        }
+
+        #rd {
+            width: 25px;
+            height:25px;
+            top: 10px;
+            position: absolute;
+        }
+        p {
+            background-color: antiquewhite;
+            width:fit-content;
+        }
+    </style>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div id="g">
+        <button class="b" onclick="Gotopage1()">Page 1</button>
+        <button class="b" onclick="Gotopage2()">Page 2</button>
+    </div>
+    <div class="container" id="s">
+    <center><img src="פרח השמש תמונה.jpg" id="rd" onclick="a()"></center>
+    <button onclick="sunflower()">Teleport</button>
+    <button onclick="hi()">show score </button>
+    <p id="hello"></p>
+    </div>
+</body>
+<script>
+    function hi() {
+        var p = document.getElementById("hello");
+        p.innerHTML=score
+    }
+    var score=0;
+    const maxHeight = window.innerHeight - 150;
+    const maxWidth = window.innerWidth - 150;
+
+    function sunflower() {
+        const rd = document.getElementById("rd");
+        
+        const randomTopPosition = Math.floor(Math.random() * maxHeight);
+        const randomLeftPosition = Math.floor(Math.random() * maxWidth);
+
+        rd.style.top = randomTopPosition + "px";
+        rd.style.left = randomLeftPosition + "px";
+        }
+    function Gotopage2() {
+    window.location.href="RotemDavid-FinalProject-Page2.html"
+    }
+    function Gotopage1() {
+    window.location.href="RotemDavid-FinalProject-Page1.html" 
+    }
+    function a() {
+        score=score + 1;
+        alert("כל הכבוד!")
+    }
+</script>
+</html>
